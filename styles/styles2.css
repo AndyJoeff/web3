@@ -899,7 +899,12 @@ img {
   .hero__title {
     font-size: var(--fs-3xl);
   }
-  
+  .approach-list {
+  padding-left: 1rem; /* or 1.25rem */
+  margin: 0;
+  list-style: disc;
+}
+
   .hero__description {
     font-size: var(--fs-base);
   }
@@ -3504,6 +3509,7 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
 
