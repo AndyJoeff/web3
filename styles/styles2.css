@@ -794,7 +794,7 @@ img {
   }
   
   .hero__stats {
-    justify-content: center;
+    justify-content: space-around;
   }
   
   .service-tag--1 {
@@ -3504,5 +3504,6 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
