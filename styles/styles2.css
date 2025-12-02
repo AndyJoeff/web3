@@ -1168,13 +1168,13 @@ img {
 }
 
 .achievement-card--1 {
-  top: 20%;
+  top: 10%;
   right: -20px;
   animation: float 4s ease-in-out infinite;
 }
 
 .achievement-card--2 {
-  bottom: 20%;
+  bottom: 10%;
   left: -20px;
   animation: float 4s ease-in-out infinite 2s;
 }
@@ -3510,6 +3510,7 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
 
