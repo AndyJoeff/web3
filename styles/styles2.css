@@ -650,7 +650,7 @@ img {
 }
 
 .service-tag--1 {
-  top: 15%;
+  top: 10%;
   left: -10%;
   animation: float 4s ease-in-out infinite;
 }
@@ -805,8 +805,8 @@ img {
   }
   
   .service-tag--2 {
-    top: 65%;
-    right: 5%;
+    top: 55%;
+    right: -3%;
   }
   
   .service-tag--3 {
@@ -3514,6 +3514,7 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
 
