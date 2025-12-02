@@ -602,7 +602,7 @@ img {
 .hero__image-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 465px;
   margin-left: auto;
 }
 
@@ -800,8 +800,8 @@ img {
   .service-tag--1 {
     top: 10%;
     left: 5%;
-    top: 5%;
-    left: -5%;
+    top: 10%;
+    left: 0;
   }
   
   .service-tag--2 {
@@ -812,6 +812,8 @@ img {
   .service-tag--3 {
     bottom: 15%;
     left: 10%;
+    bottom: 5%;
+    left: 0;
   }
   
   .floating-cta {
@@ -3512,6 +3514,7 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
 
