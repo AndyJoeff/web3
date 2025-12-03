@@ -667,7 +667,7 @@ I’m Andy Joe. I love taking messy, complex Web3 ideas and turning them into co
                 <div class="step__badge">Discovery</div>
                 <h3 class="step__title">Foundation & Research</h3>
                 <p class="step__description">I study your project, audience, and goals to gain real 
-                  insights that helps me build the right content foundation.</p> 
+                  insights that help me build the right content foundation.</p> 
                 <div class="step__features">
                   <span class="feature">Brand Analysis</span>
                   <span class="feature">Audience Research</span>
@@ -1202,7 +1202,7 @@ I’m Andy Joe. I love taking messy, complex Web3 ideas and turning them into co
               </p>
             </div>
 
-            <div class="contact__details">
+            <!--<div class="contact__details">
               <div class="contact__item">
                 <div class="contact__icon">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1250,32 +1250,63 @@ I’m Andy Joe. I love taking messy, complex Web3 ideas and turning them into co
                 </div>
               </div>
             </div>
+            -->
           </div>
 
-          <form class="contact__form">
-            <div class="form__group">
-              <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
-              <label for="name" class="form__label">Your Name</label>
-            </div>
+          <form class="contact__form" action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+  <!-- Web3Forms access key -->
+  <input type="hidden" name="access_key" value="e0d9464d-5ba9-4ff1-8cb4-d82da8d2ab91">
+  <input type="hidden" name="from_name" value="Portfolio Contact Form">
 
-            <div class="form__group">
-              <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
-              <label for="email" class="form__label">Your Email</label>
-            </div>
+  <div class="form__group">
+    <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
+    <label for="name" class="form__label">Your Name</label>
+  </div>
 
-            <div class="form__group">
-              <input type="text" id="subject" name="subject" class="form__input" placeholder=" " required>
-              <label for="subject" class="form__label">Subject</label>
-            </div>
+  <div class="form__group">
+    <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
+    <label for="email" class="form__label">Your Email</label>
+  </div>
 
-            <div class="form__group">
-              <textarea id="message" name="message" class="form__input form__textarea" placeholder=" " required
-                rows="5"></textarea>
-              <label for="message" class="form__label">Your Message</label>
-            </div>
+  <div class="form__group">
+    <input type="text" id="subject" name="subject" class="form__input" placeholder=" " required>
+    <label for="subject" class="form__label">Subject</label>
+  </div>
 
-            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
-          </form>
+  <div class="form__group">
+    <textarea id="message" name="message" class="form__input form__textarea" placeholder=" " required rows="5"></textarea>
+    <label for="message" class="form__label">Your Message</label>
+  </div>
+
+  <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+</form>
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        alert("Thank you! Your message has been sent.");
+        form.reset();
+      } else {
+        alert("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Network error. Please check your connection and try again.");
+    }
+  });
+</script>
+
         </div>
       </div>
     </section>
@@ -1378,6 +1409,7 @@ I’m Andy Joe. I love taking messy, complex Web3 ideas and turning them into co
 </body>
 
 </html>
+
 
 
 
