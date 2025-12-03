@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Generalsans';
+    src: url('https://uploads-ssl.webflow.com/65b815fb8b11393078dd199d/65b88b2531c11d404a5b8e0c_GeneralSans-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* ===== VARIABLES ===== */
 :root {
   --color-primary: #7c3aed;
@@ -3514,6 +3522,7 @@ img {
       padding-top: 120px;
     }
 }
+
 
 
 
