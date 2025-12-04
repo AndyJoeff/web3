@@ -2105,6 +2105,7 @@ img {
   justify-content: center;
   gap: var(--space-3);
   margin-bottom: var(--space-12);
+  display: none;
 }
 
 .filter-btn {
@@ -2297,6 +2298,7 @@ img {
   padding: var(--space-4) 0;
   border-top: 1px solid var(--color-gray-200);
   border-bottom: 1px solid var(--color-gray-200);
+    display: none;
 }
 
 .stat-item {
@@ -2323,6 +2325,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+    display: none;
 }
 
 .tag {
@@ -3526,6 +3529,7 @@ margin: auto;
       padding-top: 120px;
     }
 }
+
 
 
 
