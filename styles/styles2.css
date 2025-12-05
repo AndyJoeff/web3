@@ -2137,6 +2137,12 @@ img {
   gap: var(--space-3);
 }
 
+.ftv {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+}
+
 .project-card__company-logo {
   width: 48px;
   height: 48px;
@@ -3364,6 +3370,7 @@ margin: auto;
       padding-top: 120px;
     }
 }
+
 
 
 
