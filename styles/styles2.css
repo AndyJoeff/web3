@@ -2434,9 +2434,9 @@ project__dot{
     align-self: flex-start;
   }
   
-  .project-card__title {
+/*  .project-card__title {
     font-size: var(--fs-xl);
-  }
+  }*/
   
   .project-card__stats {
     /*grid-template-columns: 1fr;*/
@@ -3379,6 +3379,7 @@ margin: auto;
       padding-top: 120px;
     }
 }
+
 
 
 
