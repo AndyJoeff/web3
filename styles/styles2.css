@@ -2218,6 +2218,14 @@ project__dot{
     text-overflow: ellipsis;
 }
 
+.project-card__title {
+     display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .project-card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -3537,6 +3545,7 @@ margin: auto;
   font-weight: 700;
   color: var(--color-primary);
 }
+
 
 
 
