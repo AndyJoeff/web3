@@ -1970,7 +1970,7 @@ img {
   border: 1px solid var(--color-gray-100);
   max-width: 600px;
   margin: 0 auto;
-  /*display: none;*/
+  display: none;
 }
 
 .process-stat {
@@ -3569,6 +3569,7 @@ margin: auto;
     background-color: var(--color-gray-100);
     transform: translateY(-2px);
 }
+
 
 
 
