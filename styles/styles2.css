@@ -3381,6 +3381,162 @@ margin: auto;
     }
 }
 
+/* --- Section Layout --- */
+.portfolio-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Responsive Grid --- */
+.portfolio-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* 2 columns on medium screens */
+@media (min-width: 640px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on desktop */
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --- Project Card --- */
+.project-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+  border: 1px solid var(--color-gray-200);
+}
+
+/* Hover effect (clean & subtle) */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* --- Header --- */
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: 1.25rem;
+  align-items: flex-start;
+  border-bottom: 2px solid var(--color-gray-100);
+  padding-bottom: 0.5rem;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.company-name {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.meta {
+  font-size: var(--fs-sm);
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* --- Project Title --- */
+.project-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  line-height: 1.35;
+}
+
+/* --- Tags --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tags span {
+  background: #f3f4f6;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* --- Short Description --- */
+.description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.9rem;
+  color: #374151;
+}
+
+/* --- Scope Line --- */
+.scope {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+}
+
+/* --- CTA Button --- */
+.project-btn {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: #111827;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.project-btn:hover {
+  opacity: 0.88;
+}
+/* --- Stats List --- */
+/* --- Stats --- */
+.stats {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.stats div {
+  /* background: #f9fafb; */
+  /* border: 1px solid #e5e7eb; */
+  padding: 6px 10px;
+  /* font-size: 0.8rem; */
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.stats strong {
+  font-weight: 700;
+  color: var(--color-primary);
+}
 
 
 
