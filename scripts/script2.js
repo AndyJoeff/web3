@@ -762,7 +762,7 @@ class ProcessTimeline {
         this.autoPlayInterval = setInterval(() => {
             this.currentStep = this.currentStep >= this.steps.length ? 1 : this.currentStep + 1;
             this.setActiveStep(this.currentStep);
-        }, 3000);
+        }, 7000);
     }
     
     stopAutoPlay() {
@@ -1138,4 +1138,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', debouncedResize);
 });
+
 
