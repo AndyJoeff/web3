@@ -704,7 +704,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Process Timeline Interaction
 class ProcessTimeline {
     constructor() {
         this.steps = document.querySelectorAll('.step');
@@ -712,71 +711,74 @@ class ProcessTimeline {
         this.currentStep = 1;
         this.autoPlayInterval = null;
         this.isAutoPlaying = true;
-        
+        this.autoPlayDelayAfterClick = 3000; // Wait 3s after manual click
+
         this.init();
     }
-    
+
     init() {
         this.bindEvents();
         this.startAutoPlay();
         this.observeSection();
     }
-    
+
     bindEvents() {
         this.steps.forEach((step, index) => {
             step.addEventListener('click', () => {
-                this.stopAutoPlay();
+                this.stopAutoPlay();       // STOP completely
                 this.setActiveStep(index + 1);
-                this.startAutoPlay();
+
+                // Restart autoplay after a delay to prevent flicking
+                setTimeout(() => {
+                    this.startAutoPlay();
+                }, this.autoPlayDelayAfterClick);
             });
-            
+
             step.addEventListener('mouseenter', () => {
-                if (!this.isAutoPlaying) return;
                 this.stopAutoPlay();
             });
-            
+
             step.addEventListener('mouseleave', () => {
-                if (!this.isAutoPlaying) return;
                 this.startAutoPlay();
             });
         });
     }
-    
+
     setActiveStep(stepNumber) {
         this.currentStep = stepNumber;
-        
-        // Update active class
-        this.steps.forEach((step, index) => {
-            step.classList.toggle('step--active', index + 1 === stepNumber);
+
+        this.steps.forEach((step, idx) => {
+            step.classList.toggle('step--active', idx + 1 === stepNumber);
         });
-        
-        // Update progress bar
+
         if (this.progressBar) {
             const progress = (stepNumber / this.steps.length) * 100;
             this.progressBar.style.width = `${progress}%`;
         }
     }
-    
+
     startAutoPlay() {
+        // Never start another autoplay if one is already running
+        if (this.autoPlayInterval !== null) return;
+
         this.isAutoPlaying = true;
         this.autoPlayInterval = setInterval(() => {
-            this.currentStep = this.currentStep >= this.steps.length ? 1 : this.currentStep + 1;
+            this.currentStep = 
+                this.currentStep >= this.steps.length ? 1 : this.currentStep + 1;
             this.setActiveStep(this.currentStep);
         }, 7000);
     }
-    
+
     stopAutoPlay() {
         this.isAutoPlaying = false;
-        if (this.autoPlayInterval) {
-            clearInterval(this.autoPlayInterval);
-            this.autoPlayInterval = null;
-        }
+        clearInterval(this.autoPlayInterval);
+        this.autoPlayInterval = null;
     }
-    
+
     observeSection() {
-        const processSection = document.getElementById('process');
-        if (!processSection) return;
-        
+        const section = document.getElementById('process');
+        if (!section) return;
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -786,10 +788,11 @@ class ProcessTimeline {
                 }
             });
         }, { threshold: 0.3 });
-        
-        observer.observe(processSection);
+
+        observer.observe(section);
     }
 }
+
 
 // Contact Form Handler
 class ContactForm {
@@ -1138,5 +1141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('resize', debouncedResize);
 });
+
 
 
